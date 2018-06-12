@@ -19,9 +19,9 @@ public class BaseTest {
         mainT = Selenide.page(MainPageInTest.class);
     }
 
-    @AfterClass
+    /*@AfterClass
     public void close(){
     Selenide.close();
-    }
+    }*/
 
 }
