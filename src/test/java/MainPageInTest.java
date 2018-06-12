@@ -2,8 +2,6 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-import static com.codeborne.selenide.Selenide.page;
-
 public class MainPageInTest {
 
     @FindBy(how = How.NAME, using = "firstname")
@@ -33,10 +31,10 @@ public class MainPageInTest {
     private SelenideElement loginButton;
 
     public MainPageInTest registration(String fname, String sname, String mail, String pass){
-       firstname.setValue(fname);//.pressEnter();
-       lastname.setValue(sname);//.pressEnter();
-       email.setValue(mail);//.pressEnter();
-       password.setValue(pass);//.pressEnter();
+       firstname.setValue(fname);
+       lastname.setValue(sname);
+       email.setValue(mail);
+       password.setValue(pass);
        myday.click();
        mymonth.click();
        myyear.click();
