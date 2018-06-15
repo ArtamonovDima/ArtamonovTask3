@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="CrossBrowserExam" parallel="tests" thread-count="2">
+<suite name="CrossBrowserExam" parallel="tests" thread-count="2" verbose="1">
 
-    <test name="ChromeTest" parallel="methods" thread-count="1">
+    <test name="ChromeTest" preserve-order="true">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="TestClass"/>
         </classes>
     </test>
-    <test name="FirefoxTest" >
+    <test name="FirefoxTest" preserve-order="true">
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="TestClass"/>
         </classes>
     </test>
-
 
 </suite>

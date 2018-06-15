@@ -9,7 +9,7 @@ public class BaseTest {
 
     @Parameters("browser")
     @BeforeClass
-    public void setup(String browser){
+    public void setup(@Optional("chrome") String browser){
 
         if(browser.equals("chrome")){
             Configuration.browser = "chrome";
@@ -19,9 +19,9 @@ public class BaseTest {
         mainT = Selenide.page(MainPageInTest.class);
     }
 
-    /*@AfterClass
+    @AfterClass
     public void close(){
     Selenide.close();
-    }*/
+    }
 
 }
